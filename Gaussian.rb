@@ -18,18 +18,13 @@ class Gaussian
   end
   
   def add(db)
-    raise ArgumentError, 'db must be negative' unless db < 0
-    
     noisy = Array.new
-    # TODO to compute the 'noise' v0, you have to take something like the standard deviation of the 
-    # signal's amplitude. @mean is the absolute voltage value and way to high for computing the noise!
-    v0 = @dcb.ref20(db, 0.01)
+    v0 = @dcb.ref20(db, @peak2peak)
     puts @peak2peak
     puts v0
     puts ''
         
     @raw.each do |e|
-      puts rand*v0
       noisy << (e + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0 + rand*v0 - rand*v0)
     end
     
