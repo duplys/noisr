@@ -1,0 +1,16 @@
+== Description
+
+Welcome to noisr.
+
+
+
+== Documentation
+
+See Decibel and Gaussian for documentation.
+
+
+== Examples
+
+Basic usage:
+
+#TODO: include basic usage examples
