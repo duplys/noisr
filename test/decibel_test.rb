@@ -1,6 +1,6 @@
-require 'Decibel'
+require 'decibel'
 require 'test/unit'
-require 'test/TestUnitExtensions'
+require 'test/test_unit_extensions'
 
 class DecibelTest < Test::Unit::TestCase
   def setup
